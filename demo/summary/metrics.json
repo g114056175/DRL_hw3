@@ -1,0 +1,22 @@
+{
+  "hw3_1_naive": {
+    "win_rate": 0.575,
+    "episodes": 80
+  },
+  "hw3_1_replay": {
+    "win_rate": 0.7583333333333333,
+    "episodes": 120
+  },
+  "hw3_2_double": {
+    "win_rate": 0.8416666666666667,
+    "episodes": 120
+  },
+  "hw3_2_dueling": {
+    "win_rate": 0.8666666666666667,
+    "episodes": 120
+  },
+  "hw3_3_keras": {
+    "win_rate": 0.3,
+    "episodes": 120
+  }
+}

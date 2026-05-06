@@ -1,0 +1,58 @@
+﻿[2026-05-06] User:
+https://github.com/g114056175/DRL_hw3.git
+連結到我的github 空間 並替我撰寫簡單說明的.md (英文)
+然後根據這三個作業的階段 用一個資料夾紀錄下demo的結果(截圖 或數據資訊等)並在該資料夾用一個 conversation.log 紀錄下我們這邊的對話過程(我的提問必須完整 你操作必須精簡回答)
+
+作業需求如下 數據儘可能以圖表的方式呈現
+Homework 3: DQN and its variants
+
+Total: 100%
+
+1. 📂 Setup & Reference
+
+Base your work on the DRL in Action (English) GitHub repo:
+🔗 https://github.com/DeepReinforcementLearning/DeepReinforcementLearningInAction/tree/master
+Use the updated starter code provided by the instructor as your baseline.
+c33069f6e34157a37c0a72d20b5855b7.png
+2. 🧠 HW3-1: Naive DQN  for static mode[30%]
+
+✅ Run the provided code naive or Experience buffer reply
+💬 Chat with ChatGPT about the code to clarify your understanding
+📝 Submit a short understanding report
+Includes:
+Basic DQN implementation for an easy environment
+Experience Replay Buffer
+3. ⚖️ HW3-2: Enhanced DQN Variants  for player  mode [40%]
+
+Implement and compare the following:
+
+Double DQN
+Dueling DQN
+💡 Focus on how they improve upon the basic DQN approach
+4. 🔁 HW3-3: Enhance DQN for random mode WITH Training Tips [30%]
+
+Convert the DQN model from PyTorch to either:
+Keras, or
+PyTorch Lightning
+Bonus points for integrating training techniques to stabilize/improve learning
+(e.g., gradient clipping, learning rate scheduling, etc.)
+
+[2026-05-06] Assistant:
+Initialized local git, added remote `origin`, ran demos, generated metrics/charts, and organized outputs into stage-based folders with English markdown documentation.
+
+[2026-05-06] User:
+為何這邊 下載速度這麼慢? 我額外手動下載的 別操作/打斷
+這邊的網速至少100M 
+
+
+Downloading tensorflow-2.21.0-cp313-cp313-win_amd64.whl (351.2 MB)
+   ━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━ 144.4/351.2 MB 361.7 kB/s eta 0:09:32
+
+[2026-05-06] Assistant:
+Likely caused by PyPI/CDN throttling and pip single-stream large file download behavior; paused operations per request.
+
+[2026-05-06] User:
+載玩 接下來你繼續跑資料
+
+[2026-05-06] Assistant:
+Verified TensorFlow installation, reran demo to include HW3-3 Keras results, produced charts/metrics, and updated demo structure plus README files.
