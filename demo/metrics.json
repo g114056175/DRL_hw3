@@ -15,8 +15,12 @@
     "win_rate": 0.8666666666666667,
     "episodes": 120
   },
-  "hw3_3_keras": {
-    "win_rate": 0.3,
-    "episodes": 120
+  "hw3_3_lightning": {
+    "win_rate": 0.388,
+    "episodes": 500
+  },
+  "hw3_4_rainbow_lite": {
+    "win_rate": 0.445,
+    "episodes": 1200
   }
 }

@@ -1,33 +1,29 @@
 ﻿# HW3 Understanding Report (Short)
 
-## Requirement Checklist
-- Setup & Reference: based on DRL in Action repo and instructor-updated starter baseline.
-- HW3-1: Naive DQN and Experience Replay Buffer implementation in `static` mode.
-- HW3-2: Double DQN and Dueling DQN implemented and compared in `player` mode.
-- HW3-3: DQN converted to Keras in `random` mode with training tips.
-- Evidence: charts + metrics in `demo/` and stage subfolders.
+## Why HW3-3 looked low before
+The previous HW3-3 result used Keras DQN with short training in `random` mode, which is harder than `static` and `player` modes. That produced lower win rate.
 
-## HW3-1: Naive DQN vs Experience Replay
-- Naive DQN updates the Q-network online from the most recent transition. It is simple but noisy because consecutive samples are correlated.
-- Experience Replay stores transitions and trains on random minibatches, which breaks correlation and improves stability.
-- A target network (a delayed copy of the online network) further stabilizes learning by reducing oscillation in bootstrap targets.
+## Current HW3-3 implementation
+HW3-3 now uses a PyTorch Lightning-style DQN module in random mode with stabilization tips:
+- gradient clipping
+- LR scheduler
+- target network sync
 
-## HW3-2: Double DQN and Dueling DQN
-- Double DQN reduces overestimation by selecting the next action with the online network and evaluating it with the target network.
-- Dueling DQN separates state value and action advantage, which can learn which states are good even if the action does not matter much.
-- Both variants are trained with replay and target network, improving stability and sample efficiency compared to a basic DQN.
+This improves win rate from earlier Keras run (`0.30`) to current `0.388`.
 
-## HW3-3: Keras DQN with Training Tips (Random Mode)
-- The DQN model is reimplemented in Keras using the same MLP structure.
-- Training tips added:
-  - Gradient clipping (clipnorm) to stabilize updates.
-  - Learning rate schedule (ExponentialDecay) to reduce step size over time.
-  - Target network syncing to keep targets stable.
-- These techniques help avoid divergence and improve convergence on the random grid setting.
+## HW3-4 bonus: Rainbow-lite in random mode
+Implemented and tested:
+- Double DQN
+- Dueling Network
+- Prioritized Replay
+- n-step return (n=3)
 
-## Demo Snapshot (2026-05-06)
-- Naive DQN win rate: 0.575
-- Replay DQN win rate: 0.7583
-- Double DQN win rate: 0.8417
-- Dueling DQN win rate: 0.8667
-- Keras DQN win rate: 0.3000
+Result: `0.445` win rate, better than current HW3-3 baseline (`0.388`) in the same random mode setting.
+
+## Final snapshot (2026-05-06)
+- Naive DQN: 0.575
+- Replay DQN: 0.7583
+- Double DQN: 0.8417
+- Dueling DQN: 0.8667
+- Lightning DQN (random): 0.388
+- Rainbow-lite (random): 0.445

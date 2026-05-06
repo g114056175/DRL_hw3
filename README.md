@@ -1,66 +1,57 @@
 ﻿# HW3 DQN and Variants
 
-This repository implements Homework 3 (DQN and variants) on a 4x4 Gridworld environment.
+This repository implements Homework 3 on 4x4 Gridworld with DQN family methods.
 
 ## 1. Setup & Reference
-- Base reference (DRL in Action, English):
-  - https://github.com/DeepReinforcementLearning/DeepReinforcementLearningInAction/tree/master
-- Baseline policy:
-  - Use instructor-updated starter code in this repo as the implementation baseline.
+- Base reference: https://github.com/DeepReinforcementLearning/DeepReinforcementLearningInAction/tree/master
+- Baseline: instructor-updated starter code in this repo.
 
 ### Environment Modes
-| Mode | Player Position | Goal/Pit/Wall Position | Usage |
-|---|---|---|---|
-| `static` | Fixed `(0,3)` | Fixed: Goal `(0,0)`, Pit `(0,1)`, Wall `(1,1)` | Correctness check and reproducibility |
-| `player` | Random | Fixed: Goal `(0,0)`, Pit `(0,1)`, Wall `(1,1)` | Generalization from different starts |
-| `random` | Random | Random | Stronger policy robustness training |
+- `static`: fixed player and fixed objects.
+- `player`: random player, fixed objects.
+- `random`: player and all objects randomized.
 
-## 2. HW3-1 (Static Mode)
+## 2. HW3-1 (Static)
 - Naive DQN
-- DQN + Experience Replay Buffer (+ Target Network)
+- DQN + Experience Replay + Target Network
 
-Artifacts:
-- `demo/hw3_1_static/loss_naive.png`
-- `demo/hw3_1_static/loss_replay.png`
-
-## 3. HW3-2 (Player Mode)
-Implemented and compared:
+## 3. HW3-2 (Player)
 - Double DQN
 - Dueling DQN
 
-Artifacts:
-- `demo/hw3_2_player/loss_double.png`
-- `demo/hw3_2_player/loss_dueling.png`
+## 4. HW3-3 (Random)
+Converted DQN implementation to **PyTorch Lightning style module** (`LightningDQNModule`) and trained in random mode.
 
-## 4. HW3-3 (Random Mode + Training Tips)
-Converted from PyTorch DQN to Keras DQN.
+Training tips:
+- Gradient clipping (`max_norm=1.0`)
+- Learning-rate scheduler (`ExponentialLR`)
+- Target network synchronization
 
-Training stabilization tips used:
-- Gradient clipping (`clipnorm=1.0`)
-- Learning-rate scheduling (`ExponentialDecay`)
-- Target network periodic synchronization
+## 5. HW3-4 Bonus (Random)
+Implemented **Rainbow-lite**:
+- Dueling architecture
+- Double DQN target selection
+- Prioritized Experience Replay (PER)
+- n-step return (n=3)
+- Gradient clipping + LR scheduler
 
-Artifacts:
-- `demo/hw3_3_random/loss_keras.png`
-
-## Short Understanding Report
-- `report.md`
-
-## Conversation Log
-- `demo/conversation.log`
-
-## Run Demo
+## Run
 ```bash
 .\\.venv\\Scripts\\python.exe HW3_DQN.py --demo --out demo
 ```
 
 ## Latest Metrics (2026-05-06)
-- Naive DQN win rate: `0.575` (80 episodes)
-- Replay DQN win rate: `0.758` (120 episodes)
-- Double DQN win rate: `0.842` (120 episodes)
-- Dueling DQN win rate: `0.867` (120 episodes)
-- Keras DQN (random mode) win rate: `0.300` (120 episodes)
+- hw3_1_naive: `0.575` (80)
+- hw3_1_replay: `0.7583` (120)
+- hw3_2_double: `0.8417` (120)
+- hw3_2_dueling: `0.8667` (120)
+- hw3_3_lightning: `0.3880` (500)
+- hw3_4_rainbow_lite: `0.4450` (1200)
 
-## Visual Summary
-- `demo/summary/win_rate_comparison.png`
-- `demo/summary/metrics.json`
+## Artifacts
+- `demo/hw3_1_static/`
+- `demo/hw3_2_player/`
+- `demo/hw3_3_random/`
+- `demo/hw3_4_bonus_rainbow/`
+- `demo/summary/`
+- `demo/conversation.log`

@@ -56,3 +56,11 @@ Likely caused by PyPI/CDN throttling and pip single-stream large file download b
 
 [2026-05-06] Assistant:
 Verified TensorFlow installation, reran demo to include HW3-3 Keras results, produced charts/metrics, and updated demo structure plus README files.
+
+[2026-05-06] User:
+先把作業 3-3 那邊的數據處理好  同樣是DQN 為何他的win 那麼低? 不然就改成 PyTorch Lightning來做?
+然後3-4 你自己計劃 撰寫執行就好 我看數據
+記得修改 同時要改.md 與圖表等
+
+[2026-05-06] Assistant:
+Switched HW3-3 to PyTorch Lightning-style DQN, tuned random-mode training, implemented HW3-4 Rainbow-lite, regenerated metrics/charts, and updated markdown files.

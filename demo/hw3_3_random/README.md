@@ -1,15 +1,18 @@
-﻿# HW3-3: Keras DQN + Training Tips (Random Mode)
+﻿# HW3-3: Lightning DQN (Random Mode)
 
 ## Goal
-Convert DQN to Keras and apply stabilization tips.
+Use the same DQN idea but implement with a PyTorch Lightning-style module and train in random mode.
 
-## Training Tips Used
-- Gradient clipping (`clipnorm=1.0`)
-- Exponential learning-rate decay
-- Target network periodic synchronization
+## Why random mode is harder
+In random mode, player/goal/pit/wall positions vary each episode, so state distribution is broader and sparse success is more common.
 
-## Outputs
-- `loss_keras.png`
+## Training tips used
+- Gradient clipping (`max_norm=1.0`)
+- Exponential LR scheduler
+- Target network synchronization
 
-## Key Result
-Training completed in random mode and produced measurable win rate.
+## Output
+- `loss_lightning.png`
+
+## Result
+- Win rate: `0.388` (500 episodes)
