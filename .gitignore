@@ -2,4 +2,3 @@
 refs/
 __pycache__/
 *.pyc
-conversation.log

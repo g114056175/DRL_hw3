@@ -18,6 +18,8 @@
 - `demo/hw3_1_losses.png`
 - `demo/metrics.json` 的 `hw3_1_naive`, `hw3_1_replay`
 
+![HW3-1 Loss](demo/hw3_1_losses.png)
+
 ### HW3-2 Enhanced DQN Variants for player mode
 需求：
 - 比較 Double DQN 與 Dueling DQN
@@ -33,6 +35,8 @@
 - `demo/hw3_2_losses.png`
 - `demo/metrics.json` 的 `hw3_2_basic`, `hw3_2_double`, `hw3_2_dueling`
 
+![HW3-2 Loss](demo/hw3_2_losses.png)
+
 ### HW3-3 Random mode + Training Tips (Lightning-style)
 需求：
 - 在 random mode 強化訓練
@@ -47,6 +51,8 @@
 - `demo/hw3_3_losses.png`
 - `demo/metrics.json` 的 `hw3_3_lightning_style`
 
+![HW3-3 Loss](demo/hw3_3_losses.png)
+
 ### HW3-4 Bonus: Rainbow DQN for random mode
 需求：
 - 分析並實作 Rainbow 方向
@@ -60,6 +66,8 @@
 - `demo/random_compare_losses.png`
 - `demo/random_compare_rewards.png`
 - `demo/metrics.json` 的 `random_compare_*`
+
+![HW3-4 Loss](demo/hw3_4_losses.png)
 
 ## 2) 主要結果
 
@@ -81,6 +89,10 @@
 解讀：
 - 在 random mode 的公平比較中，Rainbow-lite 同時有最高勝率與較少步數，顯示多技巧整合在高變化環境更有優勢。
 - 若以 player vs random 交叉比較則不公平，因此報告以 random-only 對照為主。
+
+![Random Loss Compare](demo/random_compare_losses.png)
+![Random Reward Compare](demo/random_compare_rewards.png)
+![Overall Reward Compare](demo/reward_comparison.png)
 
 ## 3) 如何執行
 

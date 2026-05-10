@@ -1,0 +1,82 @@
+﻿[2026-05-10 00:00:00] USER_PROMPT
+好 接下來要開始用 conversation.log 紀錄我們接下來的對我 我的prompt 要完整紀錄(圖片不用) 你的操作則是簡單說明即可
+
+完成這個作業 
+Homework 3: DQN and its variants
+
+Total: 100%
+
+1. 📂 Setup & Reference
+
+Base your work on the DRL in Action (English) GitHub repo:
+🔗 https://github.com/DeepReinforcementLearning/DeepReinforcementLearningInAction/tree/master
+Use the updated starter code provided by the instructor as your baseline.
+c33069f6e34157a37c0a72d20b5855b7.png
+2. 🧠 HW3-1: Naive DQN  for static mode[30%]
+
+✅ Run the provided code naive or Experience buffer reply 
+💬 Chat with ChatGPT about the code to clarify your understanding
+📝 Submit a short understanding report
+Includes:
+Basic DQN implementation for an easy environment
+Experience Replay Buffer
+3. ⚖️ HW3-2: Enhanced DQN Variants  for player  mode [40%]
+
+Implement and compare the following:
+
+Double DQN
+Dueling DQN
+💡 Focus on how they improve upon the basic DQN approach
+4. 🔁 HW3-3: Enhance DQN for random mode WITH Training Tips [30%]
+
+Convert the DQN model from PyTorch to either:
+Keras, or
+PyTorch Lightning
+Bonus points for integrating training techniques to stabilize/improve learning
+(e.g., gradient clipping, learning rate scheduling, etc.)
+
+
+HW3-4（加分題）
+使用 Rainbow DQN 解 Random Mode GridWorld
+先分析，再教你怎麼做
+
+
+可以參考 教授說明的 github 裡面的程式(.ipynb)  或是學長之前寫的版本
+https://github.com/DeepReinforcementLearning/DeepReinforcementLearningInAction/tree/master
+
+https://github.com/devilhyt/nchu-stuff/tree/main/2025-spring/drl/hw4
+
+(圖片略)
+
+[2026-05-10 00:00:01] ASSISTANT_ACTION
+建立 conversation.log，準備初始化專案與實作 HW3。
+[2026-05-10 00:03:00] ASSISTANT_ACTION
+已下載參考 repo，並複製 DRLIA Errata 的 Gridworld/GridBoard 作為環境基底。
+
+[2026-05-10 00:06:00] ASSISTANT_ACTION
+建立 HW3_DQN.py：含 Naive/Replay、Double、Dueling、Random 訓練技巧、Rainbow-lite 訓練與評估輸出。
+
+[2026-05-10 00:07:00] ASSISTANT_ACTION
+修正環境檔匯入大小寫（GridBoard/Gridworld）以符合原始程式命名。
+
+[2026-05-10 00:08:00] ASSISTANT_ACTION
+將程式匯入統一改為小寫模組路徑，避免 Windows/Python 模組解析問題。
+
+[2026-05-10 00:23:00] ASSISTANT_ACTION
+完成完整訓練並輸出 demo 圖表/metrics；修正 LR scheduler 警告；新增 README.md 與 report.md。
+
+[2026-05-10 00:42:00] ASSISTANT_ACTION
+因 smoke test 覆蓋正式 metrics，已重跑完整訓練並同步更新 report.md 指標數字。
+
+[2026-05-10 00:50:00] ASSISTANT_ACTION
+開始新增 random-mode 公平比較（basic/double/dueling/rainbow-lite）並準備更新 README。
+
+[2026-05-10 00:53:00] ASSISTANT_ACTION
+已在主程式加入 random-mode 公平比較（basic/double/dueling/rainbow-lite）與對應圖表輸出。
+
+[2026-05-10 01:25:00] ASSISTANT_ACTION
+完成 random-mode 公平比較並重寫 README/report；準備只提交程式與 demo 成果資料（排除 refs/.venv/對話紀錄）。
+
+[2026-05-10 01:33:00] ASSISTANT_ACTION
+更新 README 圖片嵌入，並將 conversation.log 納入版本控制準備提交。
+
