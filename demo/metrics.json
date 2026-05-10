@@ -1,26 +1,46 @@
 {
   "hw3_1_naive": {
-    "win_rate": 0.575,
-    "episodes": 80
+    "win_rate": 100.0,
+    "avg_steps": 7.0
   },
   "hw3_1_replay": {
-    "win_rate": 0.7583333333333333,
-    "episodes": 120
+    "win_rate": 100.0,
+    "avg_steps": 7.0
+  },
+  "hw3_2_basic": {
+    "win_rate": 100.0,
+    "avg_steps": 4.465
   },
   "hw3_2_double": {
-    "win_rate": 0.8416666666666667,
-    "episodes": 120
+    "win_rate": 100.0,
+    "avg_steps": 4.27
   },
   "hw3_2_dueling": {
-    "win_rate": 0.8666666666666667,
-    "episodes": 120
+    "win_rate": 100.0,
+    "avg_steps": 4.42
   },
-  "hw3_3_lightning": {
-    "win_rate": 0.388,
-    "episodes": 500
+  "hw3_3_lightning_style": {
+    "win_rate": 86.5,
+    "avg_steps": 9.52
   },
   "hw3_4_rainbow_lite": {
-    "win_rate": 0.445,
-    "episodes": 1200
+    "win_rate": 85.5,
+    "avg_steps": 9.91
+  },
+  "random_compare_basic": {
+    "win_rate": 83.0,
+    "avg_steps": 10.305
+  },
+  "random_compare_double": {
+    "win_rate": 81.5,
+    "avg_steps": 12.115
+  },
+  "random_compare_dueling": {
+    "win_rate": 82.5,
+    "avg_steps": 11.75
+  },
+  "random_compare_rainbow_lite": {
+    "win_rate": 88.5,
+    "avg_steps": 9.01
   }
 }

@@ -1,5 +1,5 @@
 ﻿.venv/
+refs/
 __pycache__/
 *.pyc
-*.pyo
-*.pyd
+conversation.log
